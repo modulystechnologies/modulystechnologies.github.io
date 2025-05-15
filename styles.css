@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 80px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.definition-list {
+    list-style-type: none;
+}
+
+.definition-list li {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.definition-list li:nth-child(1) { animation-delay: 1s; }
+.definition-list li:nth-child(2) { animation-delay: 2s; }
+.definition-list li:nth-child(3) { animation-delay: 3s; }
+.definition-list li:nth-child(4) { animation-delay: 5s; }
+.definition-list li:nth-child(5) { animation-delay: 6s; }
+.definition-list li:nth-child(6) { animation-delay: 7s; }
+.definition-list li:nth-child(7) { animation-delay: 8s; }
+.definition-list li:nth-child(8) { animation-delay: 10s; }
+
+footer a {
+    color: #212529;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #212529;
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+footer a:hover {
+    color: #000000;
+}
+
+footer a:hover::after {
+    transform: scaleX(0.7);
+}
+
+@media (max-width: 768px) {
+    .definition-list li {
+        font-size: 16px;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    overflow: hidden;
+}
+
+.logo {
+    max-width: 240px;
+    width: 100%;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    clip-path: inset(35% 0);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    .container {
+        padding: 0 20px 60px;
+    }
+    
+    footer {
+        padding: 15px 0;
+    }
+}
